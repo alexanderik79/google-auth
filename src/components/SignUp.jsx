@@ -14,16 +14,17 @@ function SignUp() {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      console.log('Пользователь зарегистрирован');
+      console.log('User registered');
       navigate('/');
     } catch (err) {
+      console.error('Registration error:', err);
       setError(err.message);
     }
   };
 
   return (
     <div className="auth-container">
-      <h2>Регистрация</h2>
+      <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Email:</label>
@@ -35,7 +36,7 @@ function SignUp() {
           />
         </div>
         <div>
-          <label>Пароль:</label>
+          <label>Password:</label>
           <input
             type="password"
             value={password}
@@ -44,10 +45,10 @@ function SignUp() {
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit">Зарегистрироваться</button>
+        <button type="submit">Sign Up</button>
       </form>
       <p>
-        Уже есть аккаунт? <Link to="/signin">Войти</Link>
+        Already have an account? <Link to="/signin">Sign In</Link>
       </p>
     </div>
   );
