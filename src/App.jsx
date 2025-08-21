@@ -71,7 +71,16 @@ function App() {
           />
           <Route
             path="/"
-            element={<h1>Welcome{user ? `, ${user.displayName || 'User'}` : ''}!</h1>}
+            element={
+              <div className="home-container">
+                <h1>Welcome{user ? `, ${user.displayName || 'User'}` : ''}!</h1>
+                <p>
+                  This is a simple authentication app built with React, Vite, and Firebase. 
+                  It supports sign-up and sign-in with email/password or Google, password 
+                  reset, and a protected dashboard for authorized users.
+                </p>
+              </div>
+            }
           />
         </Routes>
       </div>
