@@ -18,6 +18,7 @@ function SignIn() {
       console.log('User signed in');
       const token = await auth.currentUser.getIdToken();
       console.log('JWT token:', token);
+      console.log('user ID:', auth.currentUser.uid);
       navigate('/');
     } catch (err) {
       console.error('Sign-in error:', err);
@@ -29,6 +30,8 @@ function SignIn() {
     try {
       await signInWithPopup(auth, googleProvider);
       console.log('Google sign-in successful');
+      console.log('JWT token:', token);
+      console.log('user ID:', auth.currentUser.uid);
       navigate('/');
     } catch (err) {
       console.error('Google Auth error:', err);
