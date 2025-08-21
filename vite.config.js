@@ -7,7 +7,8 @@ export default defineConfig({
     host: true,
     port: 5173,
     allowedHosts: [
-      'needed-quagga-ultimate.ngrok-free.app'
+      'needed-quagga-ultimate.ngrok-free.app',
+      'my-google-auth.netlify.app'
     ]
   },
   plugins: [react()],
