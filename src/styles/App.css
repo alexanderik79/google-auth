@@ -31,9 +31,9 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+/* nav a:hover {
     background-color: #e9ecef;
-}
+} */
 
 .user-info {
     display: flex;
@@ -47,6 +47,11 @@ nav a:hover {
     border-radius: 50%;
     border: 2px solid #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.avatar:hover {
+    scale: 1.2;
 }
 
 .user-info button {
